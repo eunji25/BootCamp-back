@@ -45,4 +45,9 @@ public class BoardImpl {
         return boardList;
     }
 
+    public void deleteBoard(String id) {
+//        Board board = boardStore.retrieveById(id);
+        boardStore.delete(id);
+    }
+
 }

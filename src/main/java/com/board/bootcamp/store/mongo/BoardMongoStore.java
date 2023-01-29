@@ -50,4 +50,9 @@ public class BoardMongoStore implements BoardStore {
         return boardMongoRepository.findById(id).map(BoardDoc::toDomain).orElse(null);
     }
 
+    @Override
+    public void delete(String id) {
+        boardMongoRepository.deleteById(id);
+    }
+
 }

@@ -21,12 +21,9 @@ public class BoardCdo {
     private String boardNo;
     private String title;
     private String content;
+    private String image;
 
     private String email;
     private String userName;
-
-    public String genId() {
-        return UUID.randomUUID().toString();
-    }
 
 }

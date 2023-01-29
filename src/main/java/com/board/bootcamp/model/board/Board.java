@@ -19,8 +19,9 @@ public class Board {
     private String boardNo;
     private String title;
     private String content;
+    private String image;
 
-    private String userId;
+    private String email;
     private String userName;
 
 }

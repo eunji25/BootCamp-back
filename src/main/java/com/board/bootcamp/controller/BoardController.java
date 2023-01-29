@@ -19,11 +19,6 @@ public class BoardController {
 
     private final BoardImpl boardImpl;
 
-//    @Autowired
-//    public void setBoardImpl(BoardImpl boardImpl) {
-//        this.boardImpl = boardImpl;
-//    }
-
     @PostMapping(value = "/new-board")
     public BoardCdo newBoard (@RequestBody BoardCommand command) {
 //        BoardCdo boardCdo = BoardCdo.sample();
@@ -48,6 +43,11 @@ public class BoardController {
     public List<Board> findBoardList () {
         List<Board> response = boardImpl.retrieveAll();
         return response;
+    }
+
+    @PostMapping("/delete-board")
+    public void deleteBoard (@RequestBody BoardQuery query) {
+        boardImpl.deleteBoard(query.getId());
     }
 
 }

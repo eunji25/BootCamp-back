@@ -9,6 +9,7 @@ public interface BoardStore {
     void create(BoardCdo boardCdo);
     void createAll(List<BoardCdo> boardCdos);
     void update(Board board);
+    void delete(String id);
 
     Board retrieveById(String id);
     List<Board> retrieveAll();

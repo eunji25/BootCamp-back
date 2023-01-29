@@ -28,6 +28,7 @@ public class BoardDoc {
     private String boardNo;
     private String title;
     private String content;
+    private String image;
 
     private String email;
     private String userName;
