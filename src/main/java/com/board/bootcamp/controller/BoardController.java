@@ -21,17 +21,9 @@ public class BoardController {
 
     @PostMapping(value = "/new-board")
     public BoardCdo newBoard (@RequestBody BoardCommand command) {
-//        BoardCdo boardCdo = BoardCdo.sample();
         BoardCdo boardCdo = command.getBoardCdo();
         return boardImpl.newBoard(boardCdo);
     }
-
-//    @PostMapping("/find-board")
-//    public BoardRdo findByBoardNo (@RequestBody BoardQuery query) {
-//        String boardNo = query.getBoardNo();
-//        BoardRdo response = boardImpl.findByBoardNo(boardNo);
-//        return response;
-//    }
 
     @PostMapping("/find-detail-board")
     public Board findDetailBoard (@RequestBody BoardQuery query) {
@@ -48,6 +40,11 @@ public class BoardController {
     @PostMapping("/delete-board")
     public void deleteBoard (@RequestBody BoardQuery query) {
         boardImpl.deleteBoard(query.getId());
+    }
+
+    @PostMapping("/modify-board")
+    public void modifyBoard (@RequestBody BoardCommand command) {
+        boardImpl.modifyBoard(command.getBoardCdo());
     }
 
 }

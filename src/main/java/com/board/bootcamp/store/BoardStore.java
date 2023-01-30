@@ -8,7 +8,7 @@ import java.util.List;
 public interface BoardStore {
     void create(BoardCdo boardCdo);
     void createAll(List<BoardCdo> boardCdos);
-    void update(Board board);
+    void update(BoardCdo boardCdo);
     void delete(String id);
 
     Board retrieveById(String id);

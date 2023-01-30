@@ -35,8 +35,8 @@ public class BoardMongoStore implements BoardStore {
     }
 
    @Override
-   public void update(Board board) {
-        BoardDoc boardDoc = new BoardDoc(board);
+   public void update(BoardCdo boardCdo) {
+        BoardDoc boardDoc = new BoardDoc(boardCdo);
         boardMongoRepository.save(boardDoc);
    }
 

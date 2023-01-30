@@ -25,15 +25,9 @@ public class BoardImpl {
         return boardCdo;
     }
 
-    public void modifyBoard(Board board) {
-        boardStore.update(board);
+    public void modifyBoard(BoardCdo boardCdo) {
+        boardStore.update(boardCdo);
     }
-
-//    public BoardRdo findByBoardNo(String boardNo) {
-//        List<Board> boardList = boardStore.retri(boardNo);
-//        BoardRdo boardRdo = new BoardRdo(boardList);
-//        return boardRdo;
-//    }
 
     public Board findById(String id) {
         Board board = boardStore.retrieveById(id);
@@ -46,7 +40,6 @@ public class BoardImpl {
     }
 
     public void deleteBoard(String id) {
-//        Board board = boardStore.retrieveById(id);
         boardStore.delete(id);
     }
 

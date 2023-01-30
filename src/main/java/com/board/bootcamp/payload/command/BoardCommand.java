@@ -14,5 +14,4 @@ public class BoardCommand {
 
     private BoardCdo boardCdo;
 
-
 }
